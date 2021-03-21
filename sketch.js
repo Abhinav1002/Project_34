@@ -56,14 +56,14 @@ function draw() {
   sling5.display();
   //sling6.display();
 
-  keyPressed();
+  mousePressed();
   drawSprites ();
 }
 
-function mouseDragged() { 
-	{ Matter.Body.applyForce(bob1.body,bob1.body.position,{x:mouseX,y:mouseY}); } 
-} 
+function mousePressed(){
+  Matter.Body.setPosition(bob1.body, { x: mouseX, y: mouseY });
 
+}
 
 
 
